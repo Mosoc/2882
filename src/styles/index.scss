@@ -1,4 +1,6 @@
 $border-gray: #cacaca;
+$date-gray: #333;
+$name-gray: #4a4a4a;
 $tree-green: #479B58;
 
 * {
@@ -44,4 +46,16 @@ $tree-green: #479B58;
   width: 96px;
   height: 96px;
   border-radius: 50%;
+}
+
+.order-status {
+  color: $tree-green;
+}
+
+.order-date {
+  color: $date-gray;
+}
+
+.order-name {
+  color: $name-gray;
 }
