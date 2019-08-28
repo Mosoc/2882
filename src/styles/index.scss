@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 
 .avatar {
   width: 96px;
