@@ -6,7 +6,7 @@ const OrderItem: React.FC<Order> = props => {
   return (
     <div className="card">
       <div className="card-aside">
-        <img src={logo} className="avatar" />
+        <img src={logo} alt={name} className="avatar" />
       </div>
       <div className="card-main">
         <div className="card-header">
