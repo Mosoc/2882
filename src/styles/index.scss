@@ -8,6 +8,15 @@
   padding: 20px;
 }
 
+.card {
+  display: flex;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .avatar {
   width: 96px;
   height: 96px;
