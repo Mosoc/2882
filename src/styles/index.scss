@@ -1,3 +1,6 @@
+$border-gray: #cacaca;
+$tree-green: #479B58;
+
 * {
   box-sizing: border-box;
 }
@@ -10,11 +13,31 @@
 
 .card {
   display: flex;
+  width: 640px;
+  height: 192px;
+  padding: 36px;
+  border: 1px solid $border-gray;
+}
+
+.card-aside {
+  width: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.card-main {
+  font-size: 1.5em;
 }
 
 .card-header {
   display: flex;
   justify-content: space-between;
+}
+
+.card-content {
+  padding: 20px 0;
 }
 
 .avatar {
