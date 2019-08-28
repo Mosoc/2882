@@ -1,24 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import OrderList from './components/OrderList';
+import './styles/index.scss';
+
+const orders = [
+  {
+      name: 'Livi優活 抽取式衛生紙(100抽x10包x10串/箱)',
+      logo: 'https://static.oopocket.com/store/iconTreemall@3x.png',
+      status: {
+        code: 3,
+        type: '已取消'
+      },
+      date: '107/6/12'
+  },
+  {
+      name: 'BALMUDA The Toaster 百慕達烤麵包機-黑色',
+      logo: 'https://static.oopocket.com/store/iconTreemall@3x.png',
+      status: {
+        code: 2,
+        type: '已成立'
+      },
+      date: '108/7/21'
+  },
+  {
+      name: '贈-短慧萬用鍋HD2133+三合一濾網「LG樂金」韓國原裝...',
+      logo: 'https://static.oopocket.com/store/iconTreemall@3x.png',
+      status: {
+        code: 1,
+        type: '處理中'
+      },
+      date: '108/6/2'
+   },
+   {
+      name: 'Apple AirPds 2',
+      logo: 'https://static.oopocket.com/store/iconTreemall@3x.png',
+      status: {
+        code: 4,
+        type: '已送達'
+      },
+      date: '108/3/02'
+  }
+]
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OrderList orders={orders} />
     </div>
   );
 }
