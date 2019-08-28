@@ -8,6 +8,7 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "dart-sass": "^1.22.10",
+    "eslint-config-prettier": "^6.1.0",
     "node-sass": "npm:sass",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -23,7 +24,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier"
+    ]
   },
   "browserslist": {
     "production": [
