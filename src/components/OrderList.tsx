@@ -17,7 +17,7 @@ const OrderList: React.FC<{ orders: Orders }> = ({ orders }) => {
   return (
     <div>
       <section>
-        <p>{`進行中`}</p>
+        <h2 className='section-title'>{`進行中`}</h2>
         {filterThenSort([StatusCode.Processing, StatusCode.Confirmed])(
           orders
         ).map((item: Order) => (
@@ -25,7 +25,7 @@ const OrderList: React.FC<{ orders: Orders }> = ({ orders }) => {
         ))}
       </section>
       <section>
-      　<p>{`已完成`}</p>
+      　<h2 className='section-title'>{`已完成`}</h2>
         {filterThenSort([StatusCode.Arrived, StatusCode.Cancelled])(
           orders
         ).map((item: Order) => (

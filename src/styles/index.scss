@@ -13,6 +13,13 @@ $tree-green: #479B58;
   padding: 20px;
 }
 
+.section-title {
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: 0 18px;
+  border-left: 8px solid $tree-green;
+}
+
 .card {
   display: flex;
   width: 640px;
@@ -30,6 +37,9 @@ $tree-green: #479B58;
 }
 
 .card-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   font-size: 1.5em;
 }
 
