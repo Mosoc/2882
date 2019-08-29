@@ -1,5 +1,5 @@
 import React from 'react';
-import { pipe, filter, descend, sortWith, prop } from 'ramda';
+import { filter, descend, sortWith, prop } from 'ramda';
 import OrderItem from './OrderItem';
 import { Order, Orders, StatusCode } from '../types';
 
@@ -7,8 +7,8 @@ const filterThenSort = (statusList: StatusCode[]) => (
   orders: Orders
 ): Orders => {
 
-  return filter(order => statusList.includes(order.status.code), orders);
-  // sortWith<Order>([descend(prop('date'))])(orders);
+  const filteredOrders = filter<Order>(order => statusList.includes(order.status.code), orders);
+  return sortWith<Order>([descend(prop('date'))])(filteredOrders);
 };
 
 const OrderList: React.FC<{ orders: Orders }> = ({ orders }) => {
